@@ -1,1 +1,16 @@
-it checks whether the mathematician Kaprekar's constant is true or not
+#it checks whether the mathematician Kaprekar's constant is true or not
+n=input("Enter the 4 digit number:")
+result=0
+while result!=6174:
+    while int(n)<1000 or int(n)>9999:
+        n=input("Enter the 4 digit number:")
+    n=str(n)
+    sorted_ = ''.join(sorted(n))
+    sorted_rev=sorted_[::-1]
+    sorted_,sorted_rev=int(sorted_),int(sorted_rev)
+    result=sorted_rev-sorted_
+    n=int(n)
+else: 
+    print("The Kaprekar's constant is True")
+    print(f"The kaprekar of {n} is {result}.")
+    
