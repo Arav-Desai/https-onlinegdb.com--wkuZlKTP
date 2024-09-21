@@ -4,6 +4,7 @@ result=0
 while result!=6174:
     while int(n)<1000 or int(n)>9999:
         n=input("Enter the 4 digit number:")
+    #now it will be treated as a string
     n=str(n)
     sorted_ = ''.join(sorted(n))
     sorted_rev=sorted_[::-1]
